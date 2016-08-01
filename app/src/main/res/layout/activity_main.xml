@@ -16,11 +16,23 @@
         android:layout_height="wrap_content"
         android:text="Hello World!" />
 
+    <EditText
+        android:id="@+id/inputName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"/>
+
+    <Button
+        android:id="@+id/mBtn1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:onClick="addName"/>
+
     <ListView
         android:id="@+id/mList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
     </ListView>
 
 </LinearLayout>
