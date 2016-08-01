@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        mName = (EditText) findViewById(R.id.inputName);
 //step 3
         mListView = (ListView) findViewById(R.id.mList);
 
@@ -44,7 +44,9 @@ public class MainActivity extends AppCompatActivity {
             arrayAdapter =
             new ArrayAdapter<String>(
                     this,
-                    android.R.layout.simple_list_item_1,
+                    //android.R.layout.simple_list_item_1, used for default android layout, code below for custom
+                    R.layout.list_item,
+                    R.id.l_item_txt,
                     dataArrayList);
 
         //attach adapter to listview
@@ -53,13 +55,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void addName(View view) {
 
-        //mName = (EditText) findViewById(R.id.inputName);
 
         //Log.d(TAG, "Name: " + mName.getText());
+
 //step 6
         dataArrayList.add(mName.getText().toString());
 //step 7 - built implementation to show changes
         arrayAdapter.notifyDataSetChanged();
-
     }
 }
