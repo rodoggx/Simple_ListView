@@ -1,15 +1,12 @@
 package com.example.simplelistview;
 
-import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -42,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
         //step 5
         //pass array of objects
             arrayAdapter =
-            new ArrayAdapter<String>(
+            new NamesAdapter<String>(
                     this,
                     //android.R.layout.simple_list_item_1, used for default android layout, code below for custom
                     R.layout.list_item,
